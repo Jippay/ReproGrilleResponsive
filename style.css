@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: 'Roboto';
+    width: 100%;
+    background-color: grey;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap; /*retour à la ligne*/
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+
+}
+
+article{ /*englobe le tout*/
+    box-shadow: 2px 2px 25px black;
+    margin: 20px;
+    background-color: white;
+    width: 30%;
+}
+
+figure{ /*image + zone sous l'image*/
+    margin-bottom: 15px;
+}
+
+figure img { /*image*/
+    width: 100%;
+}
+
+figcaption { /*zone sous l'image*/
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    line-height: 40px;
+}
+
+h2{ /**Card Title**/
+    font-size: 1.5em;
+    width: 85%;
+    padding-left: 20px;
+    padding-top: 15px;
+
+}
+
+a{ /**lien**/
+    font-size: 0.9em;
+    color: rgb(176, 88, 235);
+    text-transform: uppercase;
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: white;
+}
+
+nav ul i{ /**3 points à droite*/
+    color: rgb(176, 88, 235);
+}
+/************affichage tablette*******************************/
+@media screen and (min-width: 600px) and (max-width: 992px){
+    body{
+        background-color: white
+    }
+    article{
+        width: 40%;
+    }
+  }
+
+/************************affichage smartphone*****************/
+@media screen and (max-width: 600px) {
+    body{
+        background-color: black;
+    }
+    article{
+        width: 90%;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+}
